@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8
+from __future__ import print_function
+
 from django import forms
 from django.conf import settings
 from django.forms.utils import flatatt
 from django.utils.html import escape
 from django.utils.safestring import mark_safe
-from __future__ import print_function
 
 # Try the Python 3 import but default to the Python 2 one
 try:
