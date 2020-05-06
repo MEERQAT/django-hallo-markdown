@@ -1,11 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8
+import sys
 from django import forms
 from django.conf import settings
 from django.forms.utils import flatatt
 from django.utils.html import escape
-from django.utils.encoding import force_text
 from django.utils.safestring import mark_safe
+from __future__ import print_function
+
+# Try the Python 3 import but default to the Python 2 one
+try:
+    from django.utils.encoding import force_text
+except ImportError:
+    from django.utils.encoding import force_unicode as force_text
 
 
 class HalloInput(forms.Textarea):
