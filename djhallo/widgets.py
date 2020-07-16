@@ -19,7 +19,7 @@ class HalloInput(forms.Textarea):
 
     def render(self, name, value, attrs=None):
         value = value or ''
-        final_attrs = self.build_attrs(attrs, name=name)
+        final_attrs = self.build_attrs(attrs, {"name": name})
         html = [
             '<div class="hallo-block"><article class="edit"></article><textarea%s>%s</textarea></div>' % \
             (flatatt(final_attrs), force_text(escape(value)))
